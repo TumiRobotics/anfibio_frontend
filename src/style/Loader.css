@@ -1,0 +1,20 @@
+.loader_background {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/background_loading.png');
+    background-size: cover;
+}
+
+.tumi_load {
+    height: 50%;
+    width: auto;
+}
+
+.loader_icon {
+    height: 200px;
+    width: auto;
+}

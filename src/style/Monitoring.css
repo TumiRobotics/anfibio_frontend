@@ -1,0 +1,504 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.monitoring_container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.monitoring_header{
+    width: 100%;
+    padding: 20px 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #000000;
+    z-index: 20000;
+}
+
+.monitoring_logotumi_img {
+    height: 114px;
+    width: auto;
+}
+.monitoring_logotumi_img_2{
+    height: 110px;
+    width: auto;
+    margin: 0 26px;
+}
+.monitoring_header_text{
+    font-family: 'Montserrat';
+    font-size: 34px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.monitoring_screen{
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/monitoring_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.monitoring_parameters_container{
+    width: 50%;
+    height: 100px;
+    padding: 10px 60px;
+    position: absolute;
+    top: 12%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    font-family: 'Montserrat';
+    font-size: 38px;
+    font-weight: 300;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+.monitoring_icon_1{
+    height: 70px;
+    width: auto;
+    position: absolute;
+    right: 4.5%;
+    top: 15%;
+    z-index: 1000;
+}
+.monitoring_icon_2{
+    height: 100px;
+    width: auto;
+    position: absolute;
+    right: 5.5%;
+    top: 23%;
+    z-index: 1000;
+}
+.monitoring_icon_3{
+    height: 100px;
+    width: auto;
+    position: absolute;
+    right: 6.7%;
+    top: 32.5%;
+    z-index: 1000;
+}
+
+
+.monitoring_option_img_container{
+    height: 150px;
+    width: 150px;
+    margin-left: 44px;
+    position: absolute;
+    right: 5.0%;
+    top: 45.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 4px solid #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+}
+.monitoring_option_img{
+    height: 130px;
+    width: auto;
+    z-index: 1000;
+}
+
+
+.monitoring_text_option_1 {
+    margin: 40px 0;
+    position: absolute;
+    right: 4.7%;
+    top: 52.5%;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: 700;
+    color: #FFFFFF;
+    z-index: 1000;
+}
+
+.monitoring_option_img_container_2{
+    height: 150px;
+    width: 150px;
+    margin-left: 44px;
+    position: absolute;
+    right: 5.0%;
+    top: 60.0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 4px solid #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+.monitoring_option_img_2{
+    height: 94px;
+    width: auto;
+    z-index: 1000;
+}
+
+.monitoring_map_container{
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    z-index: 1000;
+}
+.monitoring_map{
+    width: 400px;
+    height: 300px;
+    margin-bottom: 30px;
+    background: url('../img/monitoring_map.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.monitoring_map_row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.monitoring_map_column{
+    width: 50%;
+}
+.monitoring_map_text_1{
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+
+.monitoring_photo_session {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 2%;
+    right: 4%;
+    border-radius: 50%;
+    border: 4px solid #96EADA;
+    z-index: 100000;
+}
+
+.monitoring_nav_1{
+    z-index: 100;
+    width: 280px;
+    height: 280px;
+    opacity: 0.3;
+    background-image: url('../img/nav_1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.monitoring_nav_3{
+    z-index: 200;
+    width: 110px;
+    height: auto;
+    opacity: 1;
+}
+
+.monitoring_grid{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+.monitoring_indicator_container{
+    width: 300px;
+    position: absolute;
+    right: 14%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.monitoring_indicator{
+    height: 500px;
+    width: auto;
+}
+
+.monitoring_indicator_text{
+    margin: 40px 30px;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: 500;
+    color: #FFFFFF;
+    z-index: 1000;
+}
+
+.monitoring_screenCameras{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 154px;
+    bottom: 0;
+}
+
+.monitoring_row_cameras{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.monitoring_camera_card{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.camera_1{
+    background-image: url('../img/monitoring_background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.camera_2{
+    background-image: url('../img/camera_background_2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.camera_3{
+    background-image: url('../img/camera_background_3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.camera_4{
+    background-image: url('../img/camera_background_4.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.monitoring_camera_txt_container{
+    width: 100%;
+    padding: 36px;
+    position: absolute;
+    bottom: 0;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: rgba(0,0,0,0.70);
+}
+
+.monitoring_overlay_window{
+    width: 93%;
+    height: 100%;
+    padding: 100px 80px 80px 80px;
+    z-index: 200000;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(15, 15, 15, 0.9);
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: 300;
+    color: #FFFFFF;
+}
+.monitoring_overlay_title{
+    font-family: 'Montserrat';
+    font-size: 50px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+.monitoring_overlay_text_1{
+    margin: 80px 0 80px 80px;
+    font-family: 'Montserrat';
+    font-size: 46px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+.monitoring_overlay_parameter_container{
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(44, 44, 47, 0.7);
+    
+}
+.monitoring_overlay_parameter_container_2{
+    padding: 40px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    background-color: rgba(10, 10, 10, 0.4);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.monitoring_overlay_parameter_container_3{
+    padding: 20px 40px 10px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.monitoring_overlay_parameter_container_column{
+    padding: 40px 0;
+    margin-bottom: 70px;
+    background-color: rgba(10, 10, 10, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.monitoring_info_icon {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    top: 242px;
+    left: 90px;
+
+}
+.monitoring_enable{
+    position: absolute;
+    top: 242px;
+    right: 90px;
+    font-family: 'Montserrat';
+    font-size: 46px;
+    font-weight: 500;
+    color: #96EADA;
+}
+
+.monitoring_overlay_parameter_label{
+    width: 34%;
+}
+.monitoring_overlay_parameter_label_2{
+    width: 11%;
+}
+
+.label_bold{
+    font-weight: 700;
+}
+
+.monitoring_overlay_parameter_range {
+    -webkit-appearance: none;
+    width: 40%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+  
+.monitoring_overlay_parameter_range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+.monitoring_overlay_parameter_range::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+.monitoring_finish {
+    width: 73%;
+    min-height: 36%;
+    padding: 80px 80px 80px 80px;
+    z-index: 200000;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    
+    background-color: rgba(15, 15, 15, 0.9);
+
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: 300;
+    color: #FFFFFF;
+}
+
+.monitoring_finish_title{
+    font-family: 'Montserrat';
+    font-size: 46px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.monitoring_finish_text{
+    margin: 70px 0 100px 0;
+    font-family: 'Montserrat';
+    /* font-size: 44px; */
+    font-weight: 500;
+}
+
+.monitoring_finish_button{
+    height: 116px;
+    width: 34%;
+    padding: 0px 30px;
+    margin: 0 50px;
+    background-color: #96EADA;
+    border: none;
+    border-radius: 16px;
+    font-size: 42px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.monitoring_finish_btn_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn2{
+    border: none;
+    color: #96EADA;
+    background-color: transparent;
+    border: 4px solid #96EADA;
+    border-radius: 16px;
+}
