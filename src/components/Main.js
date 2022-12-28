@@ -26,7 +26,7 @@ class Main extends Component {
                     </div>
                     <div className='welcome_conf_btn_config'>
                         <div  className='welcome_option_img_container'>
-                            <Link style={{textDecoration: 'none'}} to={"/Gallery"}><img className='welcome_option_img' src= { option1 } alt="" /></Link>
+                            <a href="http://192.168.137.80:8000/infoAnfibio/fotosInspeccionTotal"><img className='welcome_option_img' src= { option1 } alt="" /></a>
                         </div>
                         <div  className='welcome_option_img_container'>
                             <Link style={{textDecoration: 'none'}} to={"/Statistics"}><img className='welcome_option_img' src= { option2 } alt="" /></Link>

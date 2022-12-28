@@ -10,7 +10,7 @@ class Boat extends Component
             <>
             <Link to={'/Monitoring'} style={{textDecoration: 'none'}}>
                 <div className='card_boat'>
-                    <img src={this.props.informacion[1]} style={{height:"800px"}}/>
+                    <img src={this.props.informacion[1]} style={{height:"400px"}}/>
                     <div className='card_boat_txt_container'>{this.props.informacion[0]}</div>
                 </div>
             </Link>

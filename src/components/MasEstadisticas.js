@@ -15,7 +15,7 @@ class MasEstadisticas extends Component{
     }
 
     componentDidMount() {
-        fetch('http://127.0.0.1:8000/infoAnfibio/consultarEstadisticas')
+        fetch('http://192.168.137.80:8000/infoAnfibio/consultarEstadisticas')
         .then(response=>response.json())
         .then(data => {
             console.log(data)
@@ -27,7 +27,7 @@ class MasEstadisticas extends Component{
             })
         })
 
-        fetch('http://127.0.0.1:8000/infoAnfibio/infoInspecciones')
+        fetch('http://192.168.137.80:8000/infoAnfibio/infoInspecciones')
         .then(response=>response.json())
         .then(data => {
             console.log(data.inspecciones)
@@ -84,9 +84,9 @@ class MasEstadisticas extends Component{
                                 </div>
                             </div>
                         </div>
-                        <table  className='morStats_table'>
-                            <tbody className='morStats_table'>
-                                <tr  className='morStats_table_th_container'>
+                        <table  className='moreStats_table'>
+                            <tbody className='moreStats_table'>
+                                <tr  className='moreStats_table_th_container'>
                                     <th>Fecha</th>
                                     <th>Distancia</th>
                                     <th>Duración</th>

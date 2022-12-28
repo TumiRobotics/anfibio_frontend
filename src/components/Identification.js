@@ -12,7 +12,7 @@ function ingresarUsuario()
     console.log('INGRESE A ESTA FUNCION')
     let codigoInfo = document.getElementById('codUsr')
     let contraInfo = document.getElementById('fcontra')
-    fetch(`http://127.0.0.1:8000/infoAnfibio/accederUsuario?codigo=${codigoInfo.innerHTML}&contra=${contraInfo.value}`)
+    fetch(`http://192.168.137.80:8000/infoAnfibio/accederUsuario?codigo=${codigoInfo.innerHTML}&contra=${contraInfo.value}`)
     .then(response=>response.json())
     .then(data => {
         console.log(data)
@@ -40,7 +40,7 @@ class Identification extends Component
     }
 
     componentDidMount() {
-        fetch(`http://127.0.0.1:8000/infoAnfibio/datosUsuario?codigo=${this.props.codigoUsuario}`)
+        fetch(`http://192.168.137.80:8000/infoAnfibio/datosUsuario?codigo=${this.props.codigoUsuario}`)
         .then(response=>response.json())
         .then(data => {
             console.log(data)

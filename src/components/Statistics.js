@@ -17,7 +17,7 @@ class Statistics extends Component {
     }
 
     componentDidMount() {
-        fetch('http://127.0.0.1:8000/infoAnfibio/consultarEstadisticas')
+        fetch('http://192.168.137.80:8000/infoAnfibio/consultarEstadisticas')
         .then(response=>response.json())
         .then(data => {
             console.log(data)

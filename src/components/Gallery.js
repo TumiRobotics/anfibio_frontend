@@ -16,7 +16,7 @@ class Gallery extends Component {
     }
 
     componentDidMount() {
-        fetch('http://127.0.0.1:8000/infoAnfibio/infoFotos')
+        fetch('http://192.168.137.80:8000/infoAnfibio/infoFotos')
         .then(response=>response.json())
         .then(data => {
             console.log(data.fotos)
@@ -50,6 +50,7 @@ class Gallery extends Component {
                                 })
                             }                       
                         </div >
+                        {/* <br></br>
                         <br></br>
                         <br></br>
                         <br></br>
@@ -70,8 +71,7 @@ class Gallery extends Component {
                         <br></br>
                         <br></br>
                         <br></br>
-                        <br></br>
-                        <br></br>
+                        <br></br> */}
                     </div>
                 </div>
             </>

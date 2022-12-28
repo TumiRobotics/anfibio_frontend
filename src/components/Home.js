@@ -13,7 +13,7 @@ class Home extends Component
     }
 
     componentDidMount() {
-        fetch('http://127.0.0.1:8000/infoAnfibio/infoUsuarios')
+        fetch('http://192.168.137.80:8000/infoAnfibio/infoUsuarios')
         .then(response=>response.json())
         .then(data => {
             console.log(data.usuarios)

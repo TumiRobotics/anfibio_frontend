@@ -19,7 +19,7 @@ class Work extends Component
     }
 
     componentDidMount() {
-        fetch('http://127.0.0.1:8000/infoAnfibio/infoBoats')
+        fetch('http://192.168.137.80:8000/infoAnfibio/infoBoats')
         .then(response=>response.json())
         .then(data => {
             console.log(data.boats)
@@ -35,7 +35,7 @@ class Work extends Component
             <>
                 <div className='work_view'>
                     <div className='welcome_header'>
-                        <img className='welcome_logotumi_img' src={ tumilogo } alt="Logo" />
+                        <img className='home_logotumi_img' src={ tumilogo } alt="Logo" />
                         <img className='welcome_logotumi_img_2' src={ sep } alt="" />
                         <p className='welcome_header_text'>Iniciar trabajo</p> 
                     </div>
@@ -45,6 +45,7 @@ class Work extends Component
                         <Link style={{textDecoration: 'none'}} to={"/main/"}><img className='work_back_img'  src={ back_arrow } alt="" /></Link>
                         <div className='main_section'>
                             {/*<input name='fname' className="input_findWork" type="text" id="fname" placeholder='Busca tu embarcación'/>*/}
+                            {/* <br></br>
                             <br></br>
                             <br></br>
                             <br></br>
@@ -67,8 +68,7 @@ class Work extends Component
                             <br></br>
                             <br></br>
                             <br></br>
-                            <br></br>
-                            <br></br>
+                            <br></br> */}
                             <div className='card_boat_row'>
                                 {
                                     this.state.boats.map(boat => {
@@ -76,7 +76,7 @@ class Work extends Component
                                     })
                                 }
                             </div >
-                            <br></br>
+                            {/* <br></br>
                             <br></br>
                             <br></br>
                             <br></br>
@@ -92,7 +92,7 @@ class Work extends Component
                             <br></br> 
                             <br></br>
                             <br></br>
-                            <br></br> 
+                            <br></br>  */}
                             <div className='work_text_container'>
                                 <p className='work_text_1'>TUMI ANFIBIO 2022 - Limpieza de barcos</p>
                                 <div className='work_check_container'>
