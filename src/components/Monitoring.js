@@ -255,6 +255,7 @@ class Monitoring extends Component {
                                 </div>
                             </div>
                         }
+                        {/*  */}
                         <div className='monitoring_overlay_window' id='monitor_window'  style={{display: 'none'}}>
                             <p className='monitoring_overlay_title'>Verificar controles antes de iniciar el trabajo</p>
                             <img className='monitoring_info_icon'  src={ info_icon } alt="" />

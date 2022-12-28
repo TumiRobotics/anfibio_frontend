@@ -323,32 +323,34 @@
 .monitoring_overlay_window{
     width: 93%;
     height: 100%;
-    padding: 100px 80px 80px 80px;
+    padding: 50px 40px 40px 40px;
     z-index: 200000;
     position: absolute;
     display: flex;
     flex-direction: column;
     background-color: rgba(15, 15, 15, 0.9);
     font-family: 'Montserrat';
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 300;
     color: #FFFFFF;
 }
 .monitoring_overlay_title{
     font-family: 'Montserrat';
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 700;
     color: #FFFFFF;
+    text-align: left;
 }
 .monitoring_overlay_text_1{
-    margin: 80px 0 80px 80px;
+    margin: 40px 40px 40px 40px;
     font-family: 'Montserrat';
-    font-size: 46px;
+    font-size: 24px;
     font-weight: 500;
     color: #FFFFFF;
+    text-align: left;
 }
 .monitoring_overlay_parameter_container{
-    padding: 40px;
+    padding: 16px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -357,9 +359,9 @@
     
 }
 .monitoring_overlay_parameter_container_2{
-    padding: 40px;
-    margin-top: 20px;
-    margin-bottom: 70px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     background-color: rgba(10, 10, 10, 0.4);
     display: flex;
     flex-direction: row;
@@ -375,8 +377,8 @@
     align-items: center;
 }
 .monitoring_overlay_parameter_container_column{
-    padding: 40px 0;
-    margin-bottom: 70px;
+    padding: 10px 0;
+    margin-bottom: 30px;
     background-color: rgba(10, 10, 10, 0.4);
     display: flex;
     flex-direction: column;
@@ -393,10 +395,10 @@
 }
 .monitoring_enable{
     position: absolute;
-    top: 242px;
+    top: 142px;
     right: 90px;
     font-family: 'Montserrat';
-    font-size: 46px;
+    font-size: 26px;
     font-weight: 500;
     color: #96EADA;
 }
@@ -415,7 +417,7 @@
 .monitoring_overlay_parameter_range {
     -webkit-appearance: none;
     width: 40%;
-    height: 15px;
+    height: 8px;
     border-radius: 5px;  
     background: #d3d3d3;
     outline: none;
