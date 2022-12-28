@@ -243,12 +243,12 @@ class Monitoring extends Component {
                         <p className='welcome_header_text'>Trabajo iniciado</p> 
                     </div>
                     <img className='monitoring_photo_session' alt="" onClick={this.toggleDisplay}/>
-                    <div className='monitoring_screen' id='monitor_screen' id="#screenshot" ref={this.ref}>
+                    <div className='monitoring_screen' id="#screenshot" ref={this.ref}>
                         {
                             this.state.show &&
                             <div className='monitoring_finish'>
                                 <p className='monitoring_finish_title'>Terminar el trabajo</p>
-                                <img className='monitoring_info_icon'  src={ info_icon } alt="" />
+                                {/* <img className='monitoring_info_icon'  src={ info_icon } alt="" /> */}
                                 <div className='monitoring_finish_btn_container'>
                                     <button className='monitoring_finish_button btn2' onClick={this.toggleDisplay}>Continuar</button>
                                     <button className='monitoring_finish_button' onClick={this.terminarTrabajo}>Terminar trabajo</button>
@@ -306,16 +306,17 @@ class Monitoring extends Component {
                         <img className='monitoring_icon_2' src= { icon2 } alt="" />
                         <img className='monitoring_icon_3' src= { icon3 } alt="" />
                         <div  className='monitoring_option_img_container'>
-                            <button style={{backgroundColor:'transparent',border:'none'}} onClick={this.handleClickTakeScreenShot}>
+                            <button style={{backgroundColor:'transparent',border:'none', display: 'flex', justifyContent: 'center', alignItems: 'center'}} onClick={this.handleClickTakeScreenShot}>
                                 <img className='monitoring_option_img' src= { boton1 } alt="" />    
                             </button>
-                            <button onClick={grabarVideo}>
+                            
+                        </div>
+                        <button className='monitoring_record_btn'  onClick={grabarVideo}>
                                 Grabar
                             </button>
-                            <button onClick={detenerVideo}>
+                            <button className='monitoring_stop_btn' onClick={detenerVideo}>
                                 Stop
                             </button>
-                        </div>
                         <p className='monitoring_text_option_1'>{this.state.horas} : {this.state.minutos} : {this.state.segundos}</p>
                         <div className='monitoring_indicator_container'>
                             <p className='monitoring_indicator_text'>10°</p>
