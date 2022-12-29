@@ -10,6 +10,7 @@ import icon3 from "../img/monitoring_icon_3.png";
 import boton1 from "../img/monitoring_boton_1.png";
 import boton2 from "../img/monitoring_boton_2.png";
 import nav3 from "../img/nav_3.png";
+import closeBtn from "../img/close.png";
 import ind from "../img/ind.png";
 import info_icon from "../img/info__icon.png";
 import html2canvas from "html2canvas";
@@ -141,9 +142,12 @@ class Monitoring extends Component {
             horas:'0',
             minutos:'0',
             segundos:'0',
-            distancia:'0'
+            distancia:'0',
+
+            showParmams: false
         };
         this.toggleDisplay = this.toggleDisplay.bind(this);
+        this.toggleDisplayParams = this.toggleDisplayParams.bind(this);
     }
 
     ref = React.createRef();
@@ -190,6 +194,13 @@ class Monitoring extends Component {
         this.setState({
             ...this.state,
             show: !this.state.show,
+        });
+    }
+    
+    toggleDisplayParams() {
+        this.setState({
+            ...this.state,
+            showParmams: !this.state.showParmams,
         });
     }
 
@@ -256,7 +267,15 @@ class Monitoring extends Component {
                             </div>
                         }
                         {/*  */}
-                        <div className='monitoring_overlay_window' id='monitor_window'  style={{display: 'none'}}>
+
+                    <div className='monitoring_nav_1'  onClick={this.toggleDisplayParams}>
+                        <img className='monitoring_nav_3' src= { nav3 } alt="" />
+                    </div>
+                        {
+                            this.state.showParmams &&
+
+                        <div className='monitoring_overlay_window' id='monitor_window'>
+                            <img className='monitoring_overlay_close' src= { closeBtn }  onClick={this.toggleDisplayParams} alt="Close" />
                             <p className='monitoring_overlay_title'>Verificar controles antes de iniciar el trabajo</p>
                             <img className='monitoring_info_icon'  src={ info_icon } alt="" />
                             <p className='monitoring_overlay_text_1'>Modo Automático</p>
@@ -298,6 +317,7 @@ class Monitoring extends Component {
                                 <p className='monitoring_overlay_parameter_label'>Un captura cada 5 min</p>
                             </div>
                         </div>
+                        }
                         <img className='monitoring_grid' src={ "http://192.168.137.40:8080/?action=stream" } alt=""/>
                         <div className='monitoring_parameters_container'>
                             <p id='datosTiempo'>{this.state.horas}:{this.state.minutos}:{this.state.segundos}</p><p> / Grabación</p>
@@ -338,9 +358,10 @@ class Monitoring extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className='monitoring_nav_1'>
+                        {/* <div className='monitoring_nav_1'>
                             <img className='monitoring_nav_3' src= { nav3 } alt="" />
-                        </div>
+                        </div> */}
+                        
                     </div>
                 </div>
             </>

@@ -386,19 +386,19 @@
 }
 
 .monitoring_info_icon {
-    height: 50px;
+    height: 24px;
     width: auto;
     position: absolute;
-    top: 242px;
-    left: 90px;
+    top: 130px;
+    left: 40px;
 
 }
 .monitoring_enable{
     position: absolute;
-    top: 142px;
+    top: 130px;
     right: 90px;
     font-family: 'Montserrat';
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 500;
     color: #96EADA;
 }
@@ -445,9 +445,9 @@
 }
 
 .monitoring_finish {
-    width: 73%;
+    width: 72%;
     min-height: 32%;
-    padding: 40px 40px 40px 40px;
+    padding: 44px 20px 44px 20px;
     z-index: 200000;
     position: absolute;
     display: flex;
@@ -462,10 +462,9 @@
 }
 
 .monitoring_finish_title{
-    margin-bottom: 60px;
-
+    margin-bottom: 62px;
     font-family: 'Montserrat';
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     color: #FFFFFF;
 }
@@ -478,14 +477,14 @@
 }
 
 .monitoring_finish_button{
-    height: 116px;
+    height: 86px;
     width: 34%;
     padding: 0px 30px;
     margin: 0 50px;
     background-color: #96EADA;
     border: none;
     border-radius: 16px;
-    font-size: 32px;
+    font-size: 26px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     display: flex;
@@ -530,4 +529,12 @@
     position: absolute;
     right: 7%;
     top: 73%;
+}
+
+.monitoring_overlay_close {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 50px;
+    right: 50px;
 }
