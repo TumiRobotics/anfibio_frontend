@@ -520,6 +520,7 @@
     position: absolute;
     right: 6%;
     top: 68%;
+    z-index: 1000000;
 }
 .monitoring_stop_btn{
     color: #000000;
@@ -529,8 +530,18 @@
     position: absolute;
     right: 7%;
     top: 73%;
+    z-index: 1000000;
 }
-
+.monitoring_start_inspeccion{
+    color: #000000;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    position: absolute;
+    right: 6%;
+    top: 78%;
+    z-index: 1000000;
+}
 .monitoring_overlay_close {
     height: 30px;
     width: auto;

@@ -134,6 +134,24 @@ function saveFile(recordedChunks){
     document.body.removeChild(downloadLink);
 }
 
+function iniciarInspeccion()
+{
+    fetch('http://192.168.137.80:8000/infoAnfibio/iniciarInspeccion')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+    })
+}
+
+function capturarFotoInspeccion()
+{
+    fetch('http://192.168.137.80:8000/infoAnfibio/capturarFotoInspeccion')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+    })
+}
+
 class Monitoring extends Component {
     constructor(props) {
         super(props);
@@ -177,7 +195,6 @@ class Monitoring extends Component {
         });
     };
 
-
     tomarFoto()
     {
         console.log('TomandoFoto')
@@ -217,6 +234,7 @@ class Monitoring extends Component {
     }
 
     componentDidMount() {
+
         setInterval(()=>{
             console.log('hola')
             this.setState({
@@ -318,7 +336,7 @@ class Monitoring extends Component {
                             </div>
                         </div>
                         }
-                        <img className='monitoring_grid' src={ "http://192.168.137.40:8080/?action=stream" } alt=""/>
+                        <img className='monitoring_grid' src={ "http://192.168.137.80:8080/?action=stream" } alt=""/>
                         <div className='monitoring_parameters_container'>
                             <p id='datosTiempo'>{this.state.horas}:{this.state.minutos}:{this.state.segundos}</p><p> / Grabación</p>
                             <p>D: </p><p id='datoDistancia'>{this.state.distancia}</p><p> km </p>
@@ -327,17 +345,20 @@ class Monitoring extends Component {
                         <img className='monitoring_icon_2' src= { icon2 } alt="" />
                         <img className='monitoring_icon_3' src= { icon3 } alt="" />
                         <div  className='monitoring_option_img_container'>
-                            <button style={{backgroundColor:'transparent',border:'none', display: 'flex', justifyContent: 'center', alignItems: 'center'}} onClick={this.handleClickTakeScreenShot}>
+                            <button style={{backgroundColor:'transparent',border:'none', display: 'flex', justifyContent: 'center', alignItems: 'center'}} onClick={capturarFotoInspeccion}>
                                 <img className='monitoring_option_img' src= { boton1 } alt="" />    
                             </button>
                             
                         </div>
                         <button className='monitoring_record_btn'  onClick={grabarVideo}>
-                                Grabar
-                            </button>
-                            <button className='monitoring_stop_btn' onClick={detenerVideo}>
-                                Stop
-                            </button>
+                            Grabar
+                        </button>
+                        <button className='monitoring_stop_btn' onClick={detenerVideo}>
+                            Stop
+                        </button>
+                        <button className='monitoring_start_inspeccion'  onClick={iniciarInspeccion}>
+                            Iniciar
+                        </button>
                         <p className='monitoring_text_option_1'>{this.state.horas} : {this.state.minutos} : {this.state.segundos}</p>
                         <div className='monitoring_indicator_container'>
                             <p className='monitoring_indicator_text'>10°</p>
