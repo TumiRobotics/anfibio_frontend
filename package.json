@@ -22,7 +22,7 @@
   },
   "build": {
     "appId": "com.app.id",
-    "productName": "React Electron App",
+    "productName": "Anfibio",
     "files": [
       "build/**/*",
       "electron/main.js",
@@ -51,7 +51,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "electron:start": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "electron:build": "yarn build-electron && electron-builder --publish never"
+    "electron:build": "yarn build-electron && electron-builder build --linux deb --publish never"
   },
   "eslintConfig": {
     "extends": [
