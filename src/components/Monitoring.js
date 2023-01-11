@@ -207,6 +207,82 @@ class Monitoring extends Component {
         });
     }
 
+    toggleFrontLight()
+    {
+        let indicador_FL = document.getElementById('fl_ind')
+        if(indicador_FL.innerHTML === 'FL On')
+        {
+            indicador_FL.innerHTML = 'FL Off'
+            console.log('Se enciende las luces delanteras')
+            fetch("http://192.168.137.80:8000/infoAnfibio/encenderLucesFL")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+            })
+        }
+        else if(indicador_FL.innerHTML === 'FL Off')
+        {
+            indicador_FL.innerHTML = 'FL On'
+            console.log('Se enciende las luces delanteras')
+            fetch("http://192.168.137.80:8000/infoAnfibio/apagarLucesFL")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+            })
+        }
+    }
+
+    toggleBackLight()
+    {
+        let indicador_BL = document.getElementById('bl_ind')
+        if(indicador_BL.innerHTML === 'BL On')
+        {
+            indicador_BL.innerHTML = 'BL Off'
+            console.log('Se enciende las luces delanteras')
+            fetch("http://192.168.137.80:8000/infoAnfibio/encenderLucesBL")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+            })
+        }
+        else if(indicador_BL.innerHTML === 'BL Off')
+        {
+            indicador_BL.innerHTML = 'BL On'
+            console.log('Se enciende las luces delanteras')
+            fetch("http://192.168.137.80:8000/infoAnfibio/apagarLucesBL")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+            })
+        }
+    }
+
+    toogleLavado()
+    {
+        let indicador_LV = document.getElementById('lv_ind')
+        if(indicador_LV.innerHTML === 'LV On')
+        {
+            indicador_LV.innerHTML = 'LV Off'
+            console.log('Se enciende las luces delanteras')
+            fetch("http://192.168.137.80:8000/infoAnfibio/encenderLucesLV")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+            })
+        }
+        else if(indicador_LV.innerHTML === 'LV Off')
+        {
+            indicador_LV.innerHTML = 'LV On'
+            console.log('Se enciende las luces delanteras')
+            fetch("http://192.168.137.80:8000/infoAnfibio/apagarLucesLV")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+            })
+        }
+    }
+
+
     toggleDisplay() {
         this.setState({
             ...this.state,
@@ -225,7 +301,7 @@ class Monitoring extends Component {
         let datosTiempo = document.getElementById('datosTiempo')
         console.log(datosTiempo.innerHTML)
         let datoDistancia = document.getElementById('datoDistancia')
-        fetch(`http://127.0.0.1:8000/infoAnfibio/registrarTrabajo?duracion=${String(datosTiempo.innerHTML)}&distancia=${String(datoDistancia.innerHTML)}`)
+        fetch(`http://192.168.137.80:8000/infoAnfibio/registrarTrabajo?duracion=${String(datosTiempo.innerHTML)}&distancia=${String(datoDistancia.innerHTML)}`)
         .then(response=>response.json())
         .then(data => {
             console.log(data)
@@ -284,7 +360,6 @@ class Monitoring extends Component {
                                 </div>
                             </div>
                         }
-                        {/*  */}
 
                     <div className='monitoring_nav_1'  onClick={this.toggleDisplayParams}>
                         <img className='monitoring_nav_3' src= { nav3 } alt="" />
@@ -341,9 +416,12 @@ class Monitoring extends Component {
                             <p id='datosTiempo'>{this.state.horas}:{this.state.minutos}:{this.state.segundos}</p><p> / Grabación</p>
                             <p>D: </p><p id='datoDistancia'>{this.state.distancia}</p><p> km </p>
                         </div>
-                        <img className='monitoring_icon_1' src= { icon1 } alt="" />
-                        <img className='monitoring_icon_2' src= { icon2 } alt="" />
-                        <img className='monitoring_icon_3' src= { icon3 } alt="" />
+                        <button onClick={this.toggleFrontLight} className='monitoring_icon_1' id="fl_ind">FL On</button>
+                        {/*<img className='monitoring_icon_1' onClick={this.toggleLight} style={{ backgroundColor:"green" }} src= { icon1 } alt="" />*/}
+                        <button className='monitoring_icon_2' onClick={this.toggleBackLight} id="bl_ind">BL On</button>
+                        {/*<img className='monitoring_icon_2' src= { icon2 } alt="" />*/}
+                        {/*<img className='monitoring_icon_3' src= { icon3 } alt="" />*/}
+                        <button className='monitoring_icon_3' onClick={this.toogleLavado} id="lv_ind">LV On</button>
                         <div  className='monitoring_option_img_container'>
                             <button style={{backgroundColor:'transparent',border:'none', display: 'flex', justifyContent: 'center', alignItems: 'center'}} onClick={capturarFotoInspeccion}>
                                 <img className='monitoring_option_img' src= { boton1 } alt="" />    

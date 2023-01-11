@@ -87,10 +87,14 @@ class MasEstadisticas extends Component{
                         <table  className='moreStats_table'>
                             <tbody className='moreStats_table'>
                                 <tr  className='moreStats_table_th_container'>
+                                    <th>Id</th>
                                     <th>Fecha</th>
                                     <th>Distancia</th>
                                     <th>Duración</th>
                                     <th>Todas las embarcaciones</th>
+                                    <th>Ver fotos</th>
+                                    <th>Video</th>
+                                    <th>Estado</th>
                                 </tr>
                                 {
                                     this.state.inspecciones.map(inspeccion => {
